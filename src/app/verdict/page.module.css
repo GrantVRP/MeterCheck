@@ -1,0 +1,88 @@
+/* Full-screen colour. Red, green and yellow appear only on this screen. */
+.verdict {
+  min-height: 100dvh;
+  background: var(--bg);
+  color: var(--fg);
+  --focus: var(--fg);
+}
+
+.stop { --bg: var(--stop-red); --fg: var(--paper); }
+.unsure { --bg: var(--sign-yellow); --fg: var(--ink); }
+.safe { --bg: var(--safe-green); --fg: var(--paper); }
+.wrong-town { --bg: var(--wrong-grey); --fg: var(--paper); }
+
+/* Symbol and "Read it again" stay at the top while the buttons scroll. */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  max-width: 34rem;
+  margin: 0 auto;
+  padding: calc(env(safe-area-inset-top, 0px) + 2.25rem) var(--pad) 0.75rem;
+  background: var(--bg);
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  max-width: 34rem;
+  margin: 0 auto;
+  padding: 0.5rem var(--pad) calc(env(safe-area-inset-bottom, 0px) + 1.5rem);
+}
+
+.words {
+  font-size: var(--fs-verdict);
+  line-height: var(--lh-tight);
+}
+
+.untyped {
+  visibility: hidden;
+}
+
+.sentence {
+  font-size: var(--fs-sentence);
+}
+
+/* SAFE: show the real address big, so people learn what "right" looks like. */
+.address {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 1rem 1.25rem;
+  background: var(--paper);
+  color: var(--ink);
+  border-radius: var(--radius);
+}
+
+.addressLabel {
+  font-weight: 700;
+}
+
+.addressHost {
+  font-size: clamp(1.5rem, 7vw, 2.5rem);
+  font-weight: 700;
+  line-height: var(--lh-tight);
+  overflow-wrap: break-word;
+}
+
+/* "Report it" sits apart from the other buttons: it helps others, not you. */
+.reportGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+  padding-top: 1rem;
+  border-top: 3px solid var(--fg);
+  font-weight: 700;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}

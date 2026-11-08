@@ -1,0 +1,17 @@
+/* Under "Open the HotSpot app": the phone shows the app store page first. */
+.storeNote {
+  font-size: var(--fs-body);
+  margin-top: -0.25rem;
+}
+
+.machine {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-top: 1.25rem;
+  border-top: var(--border) solid var(--ink);
+}
+
+.machineTitle {
+  font-size: 2rem;
+}

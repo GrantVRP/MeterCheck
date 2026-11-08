@@ -1,0 +1,17 @@
+.place {
+  justify-content: flex-start;
+  text-align: left;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+}
+
+.city {
+  font-weight: 400;
+}
+
+.or {
+  font-size: var(--fs-sentence);
+}

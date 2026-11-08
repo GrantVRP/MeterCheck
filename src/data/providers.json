@@ -1,0 +1,651 @@
+{
+  "_about": "Parking payment and parking ticket providers used in Ontario, and the web addresses each one really uses. 'domains': the provider owns the whole name, so any address ending in it is theirs. 'hosts': exact addresses on shared services (e.g. a link service) that only this provider uses. Only entries marked confirmed or likely are trusted; 'unverified' entries are kept for review and ignored by the app. 'word': the brand word a fake would borrow, or null for names too common to judge (e.g. Indigo, Passport).",
+  "version": "2026-11-08",
+  "safe_redirect_hosts": [
+    "apps.apple.com",
+    "itunes.apple.com",
+    "play.google.com"
+  ],
+  "providers": [
+    {
+      "id": "hotspot",
+      "name": "HotSpot",
+      "word": "hotspot",
+      "website": "https://hotspotparking.com",
+      "domains": [
+        "hotspotparking.com",
+        "htsp.ca",
+        "hotspotparking.us",
+        "hotspotparking.ca"
+      ],
+      "hosts": [],
+      "unverified": [],
+      "sources": [
+        "https://www.htsp.ca/",
+        "https://www.htsp.ca/case-study/peterborough-on",
+        "https://www.htsp.ca/products/fast-tap-sign",
+        "https://www.trentu.ca/parking/",
+        "https://hotspotparking.com/"
+      ],
+      "company": "HotSpot Parking Inc. (Saint John, NB), a product of Arcadis",
+      "qr_url_patterns": [
+        {
+          "pattern": "https://hotspotparking.com/tapPoster/park/<tapId>",
+          "note": "Fast Tap signs (QR and NFC). The tap id is free text, not the zone number.",
+          "examples": [
+            "https://hotspotparking.com/tapPoster/park/htspTap50 (downtown Peterborough sign)",
+            "https://hotspotparking.com/tapPoster/park/htspTap49 (Trent University, zone 7777)",
+            "https://hotspotparking.com/tapPoster/park/trentU001 (Trent Eco Lot, zone 3333)"
+          ],
+          "sources": [
+            "https://www.htsp.ca/case-study/peterborough-on",
+            "https://www.trentu.ca/parking/"
+          ]
+        },
+        {
+          "pattern": "https://hotspotparking.com/PermitPortal/purchase/<id>",
+          "note": "Monthly permit signs",
+          "sources": [
+            "https://reddeer.ca/media/reddeerca/city-services/parking/Sign-143x501.png"
+          ]
+        },
+        {
+          "pattern": "https://hotspotparking.com/ticketportal/dashboard/<cityId>",
+          "note": "Parking ticket payment (e.g. Timmins is 85)",
+          "sources": [
+            "https://www.timmins.ca/our_services/enforcement_services_and_parking"
+          ]
+        }
+      ],
+      "domain_notes": {
+        "hotspotparking.com": "Web app, Fast Tap pay pages, permits, tickets. Registered 2012.",
+        "htsp.ca": "Company and marketing site (redirects to www.htsp.ca). Registered 2014, registrant Arcadis.",
+        "hotspotparking.us": "HotSpot US site, linked from the hotspotparking.com country picker. Registered 2021 in New Brunswick.",
+        "hotspotparking.ca": "Owned by HotSpot/Arcadis, same servers as hotspotparking.com, but its https certificate is broken, so no working code should use it."
+      },
+      "app_store": {
+        "ios": "https://apps.apple.com/ca/app/hotspot-parking-transit-taxis/id723185236",
+        "android": "https://play.google.com/store/apps/details?id=com.hotspot.hotspotmobile"
+      }
+    },
+    {
+      "id": "paybyphone",
+      "name": "PayByPhone",
+      "word": "paybyphone",
+      "website": "https://www.paybyphone.com",
+      "domains": [
+        "paybyphone.com",
+        "paybyphone.co.uk",
+        "paybyphoneapis.com"
+      ],
+      "hosts": [],
+      "unverified": [],
+      "sources": [
+        "https://www.paybyphone.com/",
+        "https://www.ctvnews.ca/ottawa/article/city-of-ottawa-warns-of-qr-code-scam-at-parking-meters"
+      ],
+      "company": "PayByPhone",
+      "known_fakes_defanged": [
+        "poybyphone[.]online (Ottawa, 2024-08)"
+      ]
+    },
+    {
+      "id": "honk",
+      "name": "HONK",
+      "word": "honk",
+      "website": "https://www.honkmobile.com",
+      "domains": [
+        "honkmobile.com"
+      ],
+      "hosts": [
+        "honk.jotform.com"
+      ],
+      "unverified": [],
+      "sources": [
+        "https://www.honkmobile.com/",
+        "https://honkmobile.zendesk.com/hc/en-us/articles/17082642120717"
+      ],
+      "company": "HonkMobile (Toronto)",
+      "qr_url_patterns": [
+        {
+          "pattern": "https://parking.honkmobile.com/hourly/zones/<zone>",
+          "note": "Hourly zones. Seen in official links from Brampton, Port Colborne, McMaster and Central Elgin.",
+          "sources": [
+            "https://portcolborne.ca/en/recreation-and-leisure/nickel_beach_parking.aspx"
+          ]
+        },
+        {
+          "pattern": "https://parking.honkmobile.com/monthly/zones/<zone>",
+          "note": "Monthly and seasonal passes.",
+          "sources": [
+            "https://www.centralelgin.org/parks-recreation/beaches/parking/"
+          ]
+        },
+        {
+          "pattern": "https://tap.honkmobile.com/p/<id>",
+          "note": "HonkTAP signs (QR and NFC), seen at Georgian College.",
+          "sources": []
+        },
+        {
+          "pattern": "https://www.honkmobile.com/",
+          "note": "The Town of The Blue Mountains' sample sign code.",
+          "sources": [
+            "https://www.thebluemountains.ca/resident-services/parking-public-transit"
+          ]
+        }
+      ],
+      "domain_notes": {
+        "honkmobile.com": "App, web pay and city pages (parking.honkmobile.com, tap.honkmobile.com, london.honkmobile.com). HONK says: if it doesn't say honkmobile.com, it's not us.",
+        "honk.jotform.com": "HONK's own forms for resident passes, on the Jotform service. Only this exact address is trusted."
+      }
+    },
+    {
+      "id": "parkmobile",
+      "name": "ParkMobile",
+      "word": "parkmobile",
+      "website": "https://parkmobile.io",
+      "domains": [
+        "parkmobile.io",
+        "parkmobile.com"
+      ],
+      "hosts": [],
+      "unverified": [],
+      "sources": [
+        "https://parkmobile.io/"
+      ]
+    },
+    {
+      "id": "greenp",
+      "name": "Green P",
+      "word": "greenp",
+      "website": "https://www.greenp.com",
+      "domains": [
+        "greenp.com",
+        "parkgreenp.com"
+      ],
+      "hosts": [
+        "parkgreenp.paywithpassport.com"
+      ],
+      "unverified": [],
+      "sources": [
+        "https://parking.greenp.com/news/be-alert-fraudulent-qr-codes/"
+      ],
+      "company": "Green P (Toronto Parking Authority)",
+      "domain_notes": {
+        "greenp.com": "App and pay pages (parking.greenp.com, mobilepay.greenp.com). New pay machines show the real code on their screen; any sticker is fake.",
+        "parkgreenp.com": "Older Green P pay site. Sends you on to parkgreenp.paywithpassport.com (Passport runs that page for Green P)."
+      }
+    },
+    {
+      "id": "opscom",
+      "name": "OPS-COM",
+      "company": "OPS-COM (parking permit and enforcement software)",
+      "word": null,
+      "website": null,
+      "domains": [
+        "ops-com.com",
+        "parkadmin.com",
+        "operationscommander.com"
+      ],
+      "hosts": [],
+      "unverified": [],
+      "qr_url_patterns": [
+        {
+          "pattern": "https://<client>.ops-com.com/permits/qrcode/reservation/<id>",
+          "note": "Trent University overnight guest parking",
+          "sources": [
+            "https://www.trentu.ca/parking/"
+          ]
+        }
+      ],
+      "domain_notes": {
+        "ops-com.com": "Each client gets its own address, e.g. trentu.ops-com.com (Trent University).",
+        "parkadmin.com": "Client portals, e.g. fleming.parkadmin.com (Fleming College)."
+      },
+      "sources": [
+        "https://www.trentu.ca/parking/",
+        "https://department.flemingcollege.ca/college-services/parking/online-parking-portal/"
+      ]
+    },
+    {
+      "id": "ipayment",
+      "name": "iPayment",
+      "company": "CORE Business Technologies (iPayment), government payment pages",
+      "word": null,
+      "website": null,
+      "domains": [],
+      "hosts": [
+        "secure35.ipayment.com"
+      ],
+      "unverified": [],
+      "domain_notes": {
+        "secure35.ipayment.com": "Shared by many governments, so only this exact address is trusted, and only in cities that use it (Peterborough parking tickets)."
+      },
+      "sources": [
+        "https://www.peterborough.ca/parking",
+        "https://www.peterborough.ca/council-city-hall/tickets-fines-and-penalties/administrative-monetary-penalty-system/"
+      ]
+    },
+    {
+      "id": "passport",
+      "name": "Passport",
+      "word": null,
+      "website": "https://passportparking.com",
+      "company": "Passport Labs (Passport Parking app; Passport Parking Canada)",
+      "domains": [
+        "passportparking.com",
+        "passportinc.com",
+        "passportca.com",
+        "ppprk.com",
+        "ezpayca.com",
+        "rmcpay.com",
+        "paywithpassport.com",
+        "gopassport.com",
+        "passportlabs.io"
+      ],
+      "hosts": [],
+      "unverified": [
+        {
+          "domain": "ppprkca.com",
+          "note": "Seen for North Bay's old Passport service (2018). Not confirmed as current."
+        }
+      ],
+      "domain_notes": {
+        "passportparking.com": "Passport Parking app web pay (e.g. park.passportparking.com). Hamilton, Orillia, Kitchener.",
+        "passportca.com": "Passport Parking Canada. Windsor, Thunder Bay, Sault Ste. Marie, Goderich, Sauble Beach, Prince Edward County.",
+        "passportinc.com": "Company site.",
+        "ppprk.com": "Passport web pay (/park/), one page per operator.",
+        "ezpayca.com": "Passport's parking ticket payment pages in Canada (orillia., tbaypark., sarnia.).",
+        "paywithpassport.com": "Pay With Passport portal (e.g. parkgreenp.paywithpassport.com for Green P)."
+      },
+      "sources": [
+        "https://www.hamilton.ca/home-neighbourhood/getting-around/parking/passport-parking-app",
+        "https://www.citywindsor.ca/residents/traffic-and-parking/on-off-street-parking"
+      ]
+    },
+    {
+      "id": "precise",
+      "name": "Parkedin",
+      "word": "parkedin",
+      "website": "https://parkedin.com",
+      "company": "Precise ParkLink (Parkedin app, hospital parking, HPASS)",
+      "domains": [
+        "parkedin.com",
+        "preciseparklink.com",
+        "preciserd.com",
+        "parkingsupport.ca",
+        "findparkingnearme.ca",
+        "payforparking.ca",
+        "parksuite.ca"
+      ],
+      "hosts": [
+        "precisebi.securepark.io",
+        "precisebi.enforcement.secureparktech.com",
+        "portal.servicepro10.com"
+      ],
+      "unverified": [],
+      "qr_url_patterns": [
+        {
+          "pattern": "https://parkedin.com/",
+          "note": "Northern Bruce Peninsula's official poster code, then you enter the zone.",
+          "sources": [
+            "https://www.northbrucepeninsula.ca/discover/parking/"
+          ]
+        }
+      ],
+      "domain_notes": {
+        "parkedin.com": "Parkedin app and guest pay. Vaughan, Richmond Hill, Niagara-on-the-Lake, Tobermory, Niagara Parks.",
+        "preciseparklink.com": "Company site, hospitalparking.preciseparklink.com, parkingsupport.preciseparklink.com.",
+        "preciserd.com": "Hospital pass pages (ipass.preciserd.com, hpasscustomer.preciserd.com).",
+        "precisebi.securepark.io": "Precise's invoices and tickets on the SecurePark service. Only this exact address is trusted."
+      },
+      "sources": [
+        "https://myvmc.ca/parking/",
+        "https://www.northbrucepeninsula.ca/discover/parking/",
+        "https://hospitalparking.preciseparklink.com/"
+      ]
+    },
+    {
+      "id": "aims",
+      "name": "AMP Park",
+      "word": null,
+      "website": "https://aimsmobilepay.com",
+      "company": "AIMS Parking (AMP Park app, parking ticket and permit portals)",
+      "domains": [
+        "aimsparking.com",
+        "aimsmobilepay.com"
+      ],
+      "hosts": [],
+      "unverified": [],
+      "domain_notes": {
+        "aimsmobilepay.com": "AMP Park app web pay. University of Waterloo, UTM, Loyalist College.",
+        "aimsparking.com": "Ticket and permit portals, one per client (e.g. oakville.aimsparking.com)."
+      },
+      "sources": [
+        "https://uwaterloo.ca/find-out-more/visit-waterloo/parking",
+        "https://www.oakville.ca/transportation-roads/parking/find-parking/paid-street-parking/"
+      ]
+    },
+    {
+      "id": "gtechna",
+      "name": "gtechna",
+      "word": "gtechna",
+      "website": null,
+      "company": "gtechna (parking ticket and permit portals)",
+      "domains": [
+        "gtechna.net",
+        "gtechna.com",
+        "gtechnaservices.com",
+        "payvaughanticket.com"
+      ],
+      "hosts": [],
+      "unverified": [],
+      "domain_notes": {
+        "gtechna.com": "Ticket portal shared by many towns: portal.gtechna.com/userportal/<town>/...",
+        "gtechna.net": "Permit portals, one per town (e.g. ajax.gtechna.net)."
+      },
+      "sources": [
+        "https://london.ca/AMP",
+        "https://ajax.ca/town-hall/governance-accountability/by-law/parking/"
+      ]
+    },
+    {
+      "id": "paymentus",
+      "name": "Paymentus",
+      "word": null,
+      "website": null,
+      "company": "Paymentus (bill payment pages used by many towns for parking tickets)",
+      "domains": [],
+      "hosts": [
+        "ipn.paymentus.com"
+      ],
+      "unverified": [],
+      "domain_notes": {
+        "ipn.paymentus.com": "Shared by many billers, so only this exact address is trusted, and only in towns that use it for parking tickets."
+      },
+      "sources": [
+        "https://www.stcatharines.ca/roads-parking-and-traffic/parking/"
+      ]
+    },
+    {
+      "id": "impark",
+      "name": "Impark",
+      "word": "impark",
+      "website": "https://impark.com",
+      "company": "Impark (private lots; hangTag Scan to Pay)",
+      "domains": [
+        "impark.com",
+        "imparknow.com",
+        "hangtag.io",
+        "parknexus.com",
+        "reimaginedparking.com"
+      ],
+      "hosts": [
+        "impark.myparkingworld.com"
+      ],
+      "unverified": [],
+      "qr_url_patterns": [
+        {
+          "pattern": "https://pay.hangtag.io/en/park/<lot code>",
+          "note": "Scan to Pay lot signs (e.g. London lot 13023).",
+          "sources": [
+            "https://impark.com/london/"
+          ]
+        }
+      ],
+      "sources": [
+        "https://impark.com/london/"
+      ]
+    },
+    {
+      "id": "indigo",
+      "name": "Indigo",
+      "word": null,
+      "website": "https://www.indigoneo.ca",
+      "company": "Indigo Park Canada (Indigo Neo app)",
+      "domains": [
+        "indigoneo.ca",
+        "parkindigo.ca",
+        "parkindigo.com",
+        "indigoneo.com"
+      ],
+      "hosts": [],
+      "unverified": [],
+      "domain_notes": {
+        "indigoneo.ca": "Indigo Neo app. Rideau Canal lockstation lots (Parks Canada). parkindigo.ca and ca.parkindigo.com send you here."
+      },
+      "sources": [
+        "https://www.indigoneo.ca/"
+      ]
+    },
+    {
+      "id": "flowbird",
+      "name": "Flowbird",
+      "word": "flowbird",
+      "website": "https://www.flowbirdapp.com",
+      "company": "Flowbird (pay machines and app)",
+      "domains": [
+        "flowbirdapp.com",
+        "flowbird.ca",
+        "flowbird.com",
+        "flowbird.group"
+      ],
+      "hosts": [],
+      "unverified": [],
+      "sources": [
+        "https://www.ottawahospital.on.ca/en/patients-and-visitors/parking/"
+      ]
+    },
+    {
+      "id": "t2",
+      "name": "T2 Systems",
+      "word": null,
+      "website": null,
+      "company": "T2 Systems (university permit and ticket portals)",
+      "domains": [
+        "t2hosted.ca",
+        "t2hosted.com",
+        "t2systems.com"
+      ],
+      "hosts": [],
+      "unverified": [],
+      "sources": [
+        "https://www.uwo.ca/parking/infractions/pay-or-appeal-infraction.html"
+      ]
+    },
+    {
+      "id": "ventek",
+      "name": "Ventek",
+      "word": null,
+      "website": null,
+      "company": "Ventek International (permit and ticket pages)",
+      "domains": [
+        "venteksys.com"
+      ],
+      "hosts": [],
+      "unverified": [],
+      "sources": [
+        "https://www.stthomas.ca/living-in-st-thomas/parking/parking-permits/"
+      ]
+    },
+    {
+      "id": "ontarioparks",
+      "name": "Ontario Parks",
+      "word": "ontarioparks",
+      "website": "https://www.ontarioparks.ca",
+      "company": "Ontario Parks (Government of Ontario): daily vehicle permits",
+      "everywhere": true,
+      "domains": [
+        "ontarioparks.ca",
+        "ontarioparks.com"
+      ],
+      "hosts": [],
+      "unverified": [],
+      "domain_notes": {
+        "ontarioparks.ca": "Daily vehicle permits at reservations.ontarioparks.ca. ontarioparks.com sends you to .ca."
+      },
+      "sources": [
+        "https://www.ontarioparks.ca/dayuse"
+      ]
+    },
+    {
+      "id": "parkscanada",
+      "name": "Parks Canada",
+      "word": null,
+      "website": "https://parks.canada.ca",
+      "company": "Parks Canada (Government of Canada)",
+      "everywhere": true,
+      "domains": [],
+      "hosts": [
+        "parks.canada.ca",
+        "parcs.canada.ca",
+        "reservation.pc.gc.ca"
+      ],
+      "unverified": [],
+      "domain_notes": {
+        "reservation.pc.gc.ca": "Parking reservations (e.g. Bruce Peninsula National Park)."
+      },
+      "sources": [
+        "https://parks.canada.ca/pn-np/on/bruce/activ/emplacements-locations/parking"
+      ]
+    },
+    {
+      "id": "grca",
+      "name": "Grand River Conservation",
+      "word": null,
+      "website": "https://www.grandriver.ca",
+      "company": "Grand River Conservation Authority (park day passes)",
+      "domains": [
+        "grandriver.ca",
+        "grcacamping.ca"
+      ],
+      "hosts": [],
+      "unverified": [
+        {
+          "note": "The ePass code on unstaffed gates goes to a company GRCA doesn't name."
+        }
+      ],
+      "sources": [
+        "https://www.grandriver.ca/outdoor-recreation/conservation-areas/conservation-area-services-info-fees-and-more/conservation-areas-epass/"
+      ]
+    },
+    {
+      "id": "lprca",
+      "name": "Long Point Region Conservation",
+      "word": null,
+      "website": "https://www.lprca.on.ca",
+      "company": "Long Point Region Conservation Authority (day passes on GoingToCamp)",
+      "domains": [
+        "lprca.on.ca"
+      ],
+      "hosts": [
+        "longpoint.goingtocamp.com"
+      ],
+      "unverified": [],
+      "sources": [
+        "https://www.lprca.on.ca/outdoor-recreation/day-use-season-passes/"
+      ]
+    },
+    {
+      "id": "parkpass",
+      "name": "ParkPass",
+      "word": null,
+      "website": null,
+      "company": "ParkPass Project (Tobermory reserved lots)",
+      "domains": [
+        "parkpassproject.com"
+      ],
+      "hosts": [],
+      "unverified": [],
+      "sources": [
+        "https://www.northbrucepeninsula.ca/discover/parking/"
+      ]
+    },
+    {
+      "id": "spplus",
+      "name": "SP+",
+      "word": null,
+      "website": "https://www.spplus.com",
+      "company": "SP+ and Metropolis (private garages and lots)",
+      "domains": [
+        "spplus.com",
+        "parking.com",
+        "metropolis.io"
+      ],
+      "hosts": [],
+      "unverified": [],
+      "sources": [
+        "Provider catalogue, checked 2026-11-07"
+      ]
+    },
+    {
+      "id": "arrive",
+      "name": "EasyPark",
+      "word": "easypark",
+      "website": "https://www.easypark.com",
+      "company": "Arrive (EasyPark, ParkMobile, ParkWhiz, BestParking)",
+      "domains": [
+        "easypark.com",
+        "arrive.com",
+        "parkwhiz.com",
+        "parkwhiz.ca",
+        "bestparking.com",
+        "easyparksystem.net"
+      ],
+      "hosts": [],
+      "unverified": [],
+      "sources": [
+        "Provider catalogue, checked 2026-11-07"
+      ]
+    },
+    {
+      "id": "spothero",
+      "name": "SpotHero",
+      "word": "spothero",
+      "website": "https://spothero.com",
+      "company": "SpotHero (parking bookings)",
+      "domains": [
+        "spothero.com"
+      ],
+      "hosts": [],
+      "unverified": [],
+      "sources": [
+        "Provider catalogue, checked 2026-11-07"
+      ]
+    },
+    {
+      "id": "pango",
+      "name": "Pango",
+      "word": null,
+      "website": "https://www.mypango.com",
+      "company": "Pango Parking (North America)",
+      "domains": [
+        "mypango.com"
+      ],
+      "hosts": [],
+      "unverified": [],
+      "sources": [
+        "Provider catalogue, checked 2026-11-07"
+      ]
+    }
+  ],
+  "not_official_defanged": [
+    "paybyphone[.]ca (parked page with ad trackers)",
+    "paybyphone[.]net (parked)",
+    "honkmobile[.]ca (parked)",
+    "honkmobile[.]net (parked)",
+    "honk[.]ca (for sale)",
+    "honk[.]me, hnk[.]me (unrelated apps)",
+    "htsp[.]com (parked)",
+    "parkedin[.]ca (parked)",
+    "passportparking[.]ca (for sale)",
+    "gopassportca[.]com (no longer works)",
+    "indigoparking[.]com (for sale)",
+    "impark[.]ca (placeholder)",
+    "parklink[.]ca, pay[.]parklink[.]ca (coming-soon page, owner unknown)",
+    "spplus[.]ca (server error, owner unknown)",
+    "poybyphone[.]online (fake PayByPhone, Ottawa 2024)",
+    "161-35-47-111[.]cprapid[.]com (fake Green P sticker, Toronto 2026)",
+    "qr[.]link/42a0fn (link service used by a fake Green P sticker, Toronto 2026)"
+  ]
+}

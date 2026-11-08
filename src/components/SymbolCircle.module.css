@@ -1,0 +1,26 @@
+.circle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: var(--symbol);
+  height: var(--symbol);
+  border-radius: 50%;
+  background: var(--paper);
+}
+
+.small {
+  width: 4rem;
+  height: 4rem;
+}
+
+.icon {
+  width: 64%;
+  height: 64%;
+}
+
+.stop { color: var(--stop-red); }
+.safe { color: var(--safe-green); }
+.wrong-town { color: var(--wrong-grey); }
+/* White on yellow is faint, so the NOT SURE circle gets a black ring. */
+.unsure { color: var(--ink); border: var(--border) solid var(--ink); }

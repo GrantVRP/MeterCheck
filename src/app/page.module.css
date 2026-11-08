@@ -1,0 +1,79 @@
+.home {
+  gap: 1.75rem;
+}
+
+/* Gear sits alone at top right; the city chip gets the full width below it. */
+.top {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.25rem;
+  margin-top: -1.5rem;
+}
+
+.top .chip {
+  align-self: stretch;
+}
+
+/* City chip: pill, 56px tall. The whole chip is the "Change" button. */
+.chip {
+  display: flex;
+  flex-wrap: wrap; /* with big text, "Change" moves under the name */
+  align-items: center;
+  gap: 0.25rem 0.5rem;
+  min-height: var(--chip-h);
+  padding: 0.25rem 0.5rem 0.25rem 0.9rem;
+  border: var(--border) solid var(--ink);
+  border-radius: calc(var(--chip-h) / 2);
+  color: var(--ink);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.chipIcon {
+  flex-shrink: 0;
+}
+
+.chipLabel {
+  /* Never narrower than its longest word, so words don't split mid-word. */
+  flex: 1 1 8rem;
+  line-height: var(--lh-tight);
+  padding: 0.35rem 0;
+}
+
+.change {
+  flex-shrink: 0;
+  padding: 0.3rem 0.8rem;
+  background: var(--sign-yellow);
+  border: 2px solid var(--ink);
+  border-radius: 999px;
+}
+
+/* The one small gear, Home only. Still a 56px target. */
+.gear {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: var(--chip-h);
+  height: var(--chip-h);
+  color: var(--ink);
+  border-radius: 50%;
+}
+
+.headline {
+  font-size: var(--fs-heading);
+}
+
+/* The huge "Check a parking code" button: about 220px tall on most phones. */
+.big {
+  flex-direction: column;
+  gap: 1rem;
+  min-height: clamp(10rem, 28dvh, 13.75rem);
+  font-size: 1.625rem;
+}
+
+.bigIcon {
+  width: 4rem;
+  height: 4rem;
+}

@@ -1,0 +1,39 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--symbol);
+  height: var(--symbol);
+  border-radius: 50%;
+  background: var(--ink);
+  color: var(--paper);
+  font-size: 2.5rem;
+}
+
+.mini {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  background: var(--sign-yellow);
+  border: var(--border) solid var(--ink);
+  border-radius: var(--radius);
+}
+
+.pin {
+  flex-shrink: 0;
+  width: 3.5rem;
+  height: 3.5rem;
+}
+
+.miniText {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  min-width: 0;
+}
+
+.host {
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}

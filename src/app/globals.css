@@ -1,0 +1,273 @@
+/* Meter Check design tokens.
+   Style: road-safety signs. Black, white and yellow everywhere;
+   red and green fill the screen only on verdict screens. */
+
+:root {
+  /* Colours. Every text pair below is 7:1 contrast or better. */
+  --ink: #111111;          /* text, main buttons, outlines (18.9:1 on paper) */
+  --paper: #ffffff;        /* backgrounds */
+  --sign-yellow: #ffd100;  /* NOT SURE, zone box, highlights (ink on it: 12.9:1) */
+  --stop-red: #a3161a;     /* STOP screen (paper on it: 7.8:1) */
+  --safe-green: #0b5d2a;   /* SAFE screen (paper on it: 8.0:1) */
+  --wrong-grey: #4d4d4d;   /* WRONG TOWN? screen (paper on it: 8.4:1) */
+  --muted: #444444;        /* small labels, on paper only (9.7:1) */
+
+  /* Colour a screen is painted with, and the colour of text on it.
+     Verdict screens override these two. */
+  --surface: var(--paper);
+  --on-surface: var(--ink);
+  --focus: var(--ink);
+
+  /* Text size. Settings sets --text-scale to 1, 1.15 or 1.3.
+     Everything is in rem, so the browser's own text size still applies. */
+  --text-scale: 1;
+  --fs-body: 1.25rem;                              /* 20px */
+  --fs-sentence: 1.4375rem;                        /* 23px */
+  --fs-heading: 2.5rem;                            /* 40px */
+  --fs-verdict: clamp(2.875rem, 13vw, 3.25rem);    /* 46-52px */
+  --fs-zone: 4.75rem;                              /* 76px */
+  --lh-body: 1.4;
+  --lh-tight: 1.15;
+
+  /* Shapes */
+  --radius: 16px;
+  --border: 3px;
+  --target: max(64px, 4rem);   /* minimum tap height */
+  --gap: 1rem;                 /* space between tap targets (>= 14px) */
+  --chip-h: max(56px, 3.5rem);
+  --symbol: 6rem;              /* white symbol circle, 96px */
+  --pad: 1.25rem;              /* screen edge padding */
+
+  /* Motion */
+  --fade: 150ms;
+}
+
+/* Text size choice multiplies the root size, so every rem grows with it. */
+html {
+  font-size: calc(100% * var(--text-scale));
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+html[data-text="large"] { --text-scale: 1.15; }
+html[data-text="xlarge"] { --text-scale: 1.3; }
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  min-height: 100dvh;
+  font-family: var(--font-atkinson), system-ui, sans-serif;
+  font-size: var(--fs-body);
+  font-weight: 400;
+  line-height: var(--lh-body);
+  color: var(--on-surface);
+  background: var(--surface);
+  -webkit-tap-highlight-color: transparent;
+}
+
+h1, h2, h3 {
+  font-weight: 700;
+  line-height: var(--lh-tight);
+}
+
+h1 { font-size: var(--fs-heading); }
+
+img, svg, video { display: block; max-width: 100%; }
+
+button, input, select, textarea { font: inherit; color: inherit; }
+
+/* Thick, clear focus ring for keyboard and switch users. */
+:focus-visible {
+  outline: 4px solid var(--focus);
+  outline-offset: 3px;
+}
+
+/* Visually hidden, still read by screen readers. */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ---------- Buttons ----------
+   Full width, at least 64px tall, 16px corners. Never two small ones side by side. */
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  width: 100%;
+  min-height: var(--target);
+  padding: 0.75rem 1.25rem;
+  border: var(--border) solid transparent;
+  border-radius: var(--radius);
+  font-size: var(--fs-body);
+  font-weight: 700;
+  line-height: var(--lh-tight);
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  user-select: none;
+  touch-action: manipulation;
+}
+
+/* Main action: black on white screens. */
+.btn-primary { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+.btn-primary:active { background: var(--paper); color: var(--ink); }
+
+/* Second action: black outline. */
+.btn-outline { background: transparent; color: var(--ink); border-color: var(--ink); }
+.btn-outline:active { background: var(--ink); color: var(--paper); }
+
+/* On red or green screens, black would be too faint (2.4:1),
+   so buttons there are solid white or white-outlined. */
+.on-color .btn-primary,
+.btn-white { background: var(--paper); color: var(--ink); border-color: var(--paper); }
+.on-color .btn-outline { color: var(--paper); border-color: var(--paper); }
+.on-color .btn-outline:active { background: var(--paper); color: var(--ink); }
+
+/* Icons keep their size when button text wraps onto two lines. */
+.btn svg,
+.pill svg {
+  flex-shrink: 0;
+}
+
+.btn-stack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+}
+
+/* Round "Back" / "Read it again" button. Takes the colour of the screen's text. */
+.pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: var(--target);
+  padding: 0 1.25rem 0 1rem;
+  border: var(--border) solid currentColor;
+  border-radius: 999px;
+  background: transparent;
+  color: inherit;
+  font-size: var(--fs-body);
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+/* Text link with a big tap area, e.g. "Details". */
+.text-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--target);
+  color: inherit;
+  font-size: var(--fs-body);
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 0.2em;
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+/* ---------- Page layout ---------- */
+
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 34rem;
+  min-height: 100dvh;
+  margin: 0 auto;
+  /* Top padding leaves room for the Demo tag. */
+  padding: calc(env(safe-area-inset-top, 0px) + 2.25rem) var(--pad) calc(env(safe-area-inset-bottom, 0px) + 1.5rem);
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+}
+
+.lead {
+  font-size: var(--fs-sentence);
+  line-height: var(--lh-body);
+}
+
+.label {
+  color: var(--muted);
+  font-weight: 700;
+}
+
+/* A bordered panel, used for notes and info, never as a row of small cards. */
+.panel {
+  padding: 1rem 1.25rem;
+  border: var(--border) solid var(--ink);
+  border-radius: var(--radius);
+}
+
+.panel-yellow {
+  background: var(--sign-yellow);
+  color: var(--ink);
+}
+
+.spacer {
+  flex: 1;
+}
+
+/* ---------- Demo tag ---------- */
+
+.demo-tag {
+  position: fixed;
+  z-index: 50;
+  top: calc(env(safe-area-inset-top, 0px) + 0.3rem);
+  left: calc(env(safe-area-inset-left, 0px) + 0.5rem);
+  padding: 0 0.6rem;
+  background: var(--sign-yellow);
+  color: var(--ink);
+  border: 2px solid var(--ink);
+  border-radius: 999px;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  pointer-events: none;
+}
+
+/* ---------- Screen fade (the only motion besides the verdict typing) ---------- */
+
+.screen {
+  min-height: 100dvh;
+  animation: screen-in var(--fade) ease-out both;
+}
+
+@keyframes screen-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .screen { animation: none; }
+}
+
+/* Printing (the /demo codes page): no Demo tag, no screen fade. */
+@media print {
+  .demo-tag { display: none; }
+  .screen { animation: none; }
+}

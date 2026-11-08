@@ -1,0 +1,35 @@
+.paid {
+  font-size: var(--fs-sentence);
+  font-weight: 700;
+}
+
+/* Big full-width call buttons: name on top, number below. */
+.call {
+  justify-content: flex-start;
+  text-align: left;
+  padding-top: 0.9rem;
+  padding-bottom: 0.9rem;
+}
+
+.icon {
+  flex-shrink: 0;
+  width: 2rem;
+  height: 2rem;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  font-weight: 400;
+}
+
+.who {
+  font-weight: 700;
+}
+
+.note {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}

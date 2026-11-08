@@ -1,0 +1,65 @@
+.switch {
+  justify-content: space-between;
+  text-align: left;
+}
+
+.state {
+  flex-shrink: 0;
+  min-width: 4rem;
+  padding: 0.25rem 0.75rem;
+  border: 2px solid var(--ink);
+  border-radius: 999px;
+}
+
+.on {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  border: 0;
+  padding: 0;
+  min-width: 0;
+}
+
+.legend {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.option {
+  justify-content: flex-start;
+}
+
+.chosen {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+/* Keyboard focus lands on the hidden radio; show it on the label. */
+.option:has(input:focus-visible) {
+  outline: 4px solid var(--focus);
+  outline-offset: 3px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.fieldLabel {
+  font-weight: 700;
+}
+
+.input {
+  min-height: var(--target);
+  padding: 0 1rem;
+  border: var(--border) solid var(--ink);
+  border-radius: var(--radius);
+  background: var(--paper);
+}

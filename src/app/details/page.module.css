@@ -1,0 +1,51 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  border-top: 2px solid var(--ink);
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 0.75rem 0;
+  border-bottom: 2px solid var(--ink);
+}
+
+.row dt {
+  font-weight: 700;
+}
+
+.row dd {
+  margin: 0;
+}
+
+/* Addresses as plain text: selectable, never a link. */
+.mono {
+  font-family: ui-monospace, "Cascadia Mono", Menlo, Consolas, monospace;
+  font-size: 1.125rem;
+  overflow-wrap: anywhere;
+}
+
+.chain {
+  padding-left: 1.5rem;
+}
+
+.reasons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.reasons h2 {
+  font-size: 1.75rem;
+}
+
+.reasons ul {
+  padding-left: 1.5rem;
+}
+
+.signals {
+  margin-top: 0.5rem;
+  padding-left: 1.5rem;
+}

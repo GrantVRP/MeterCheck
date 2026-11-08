@@ -1,0 +1,33 @@
+.filter {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.select {
+  min-height: var(--target);
+  padding: 0 1rem;
+  border: var(--border) solid var(--ink);
+  border-radius: var(--radius);
+  background: var(--paper);
+  font-weight: 700;
+}
+
+/* A plain list with lines between rows: no small cards. */
+.list {
+  list-style: none;
+  padding: 0;
+  border-top: 2px solid var(--ink);
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  padding: 0.75rem 0;
+  border-bottom: 2px solid var(--ink);
+}
+
+.host {
+  overflow-wrap: anywhere;
+}

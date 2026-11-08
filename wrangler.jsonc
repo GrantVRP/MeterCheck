@@ -1,0 +1,38 @@
+// Cloudflare Workers settings for Meter Check.
+// Deploy with: npm run deploy (after `npx wrangler login`).
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "meter-check",
+  "main": ".open-next/worker.js",
+  "compatibility_date": "2026-11-01",
+  "compatibility_flags": [
+    // Lets Next.js use the Node APIs it needs.
+    "nodejs_compat",
+    // Safety: the server's look-ups can only reach the public internet, never private networks.
+    "global_fetch_strictly_public"
+  ],
+  "assets": {
+    "directory": ".open-next/assets",
+    "binding": "ASSETS"
+  },
+  "services": [
+    {
+      "binding": "WORKER_SELF_REFERENCE",
+      "service": "meter-check"
+    }
+  ],
+  // Fake-code reports for the map (Cloudflare D1). Tables are in migrations/.
+  "d1_databases": [
+    {
+      "binding": "REPORTS_DB",
+      "database_name": "meter-check-reports",
+      "database_id": "REPLACE_WITH_YOUR_D1_DATABASE_ID", // from: npx wrangler d1 create meter-check-reports
+      "migrations_dir": "migrations"
+    }
+  ],
+  "observability": {
+    "enabled": true
+  },
+  // Also serve the site on your free *.workers.dev address.
+  "workers_dev": true
+}
