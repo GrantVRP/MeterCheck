@@ -1,3 +1,5 @@
+// Copyright (c) 2026 GrantVRP. All rights reserved. See LICENSE.
+
 // Reading web addresses. Pure: used by the server and by the phone when offline.
 
 // A website name with no "https://" in front, e.g. "hotspotparking.com/z/1001".

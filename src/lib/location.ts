@@ -1,3 +1,5 @@
+// Copyright (c) 2026 GrantVRP. All rights reserved. See LICENSE.
+
 // Where the person is: GPS, or the place they picked on the Change screen.
 // Browser only. Readings stay on this phone except when sent with a check.
 

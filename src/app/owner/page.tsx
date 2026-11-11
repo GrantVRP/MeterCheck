@@ -1,3 +1,5 @@
+// Copyright (c) 2026 GrantVRP. All rights reserved. See LICENSE.
+
 "use client";
 
 // The owner's map of every report, for passing on to the right authorities.

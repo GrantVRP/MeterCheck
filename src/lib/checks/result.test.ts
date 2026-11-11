@@ -1,3 +1,5 @@
+// Copyright (c) 2026 GrantVRP. All rights reserved. See LICENSE.
+
 import { describe, expect, it } from "vitest";
 import { getPlace } from "@/lib/places";
 import { DEMO_CODES } from "@/lib/samples";

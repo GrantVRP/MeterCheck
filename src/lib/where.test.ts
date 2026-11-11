@@ -1,3 +1,5 @@
+// Copyright (c) 2026 GrantVRP. All rights reserved. See LICENSE.
+
 import { describe, expect, it } from "vitest";
 import { buildResult } from "./checks/result";
 import type { LinkFacts } from "./checks/verdict";

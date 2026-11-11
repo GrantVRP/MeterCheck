@@ -1,3 +1,5 @@
+// Copyright (c) 2026 GrantVRP. All rights reserved. See LICENSE.
+
 // The places we support, built from the registry.
 // Each place knows its "real site" and how to pay without scanning.
 // Only places in a live city (LIVE_CITY_IDS) are shown; the rest are ready for later.

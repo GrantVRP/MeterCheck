@@ -1,3 +1,5 @@
+// Copyright (c) 2026 GrantVRP. All rights reserved. See LICENSE.
+
 // Shared helpers for reports: loading them, the offline seed, clusters, labels, CSV export.
 
 import { defang, timeAgo } from "./format";

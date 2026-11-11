@@ -1,3 +1,5 @@
+// Copyright (c) 2026 GrantVRP. All rights reserved. See LICENSE.
+
 // POST /api/owner/login { password }: signs the owner in with a cookie for 12 hours.
 
 import { newSession, ownerPassword, passwordMatches, recordFail, sessionCookie, tooManyFails } from "@/lib/server/owner";

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 GrantVRP. All rights reserved. See LICENSE.
+
 // One HEAD request on the laptop (Node). Checks the real network address at
 // connect time, so a website name can't secretly point us at a private address.
 

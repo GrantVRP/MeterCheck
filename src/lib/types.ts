@@ -1,3 +1,5 @@
+// Copyright (c) 2026 GrantVRP. All rights reserved. See LICENSE.
+
 import type { PlaceId } from "./places";
 
 /** wrong-town: a real company's code, but for another town (or our idea of where you are is wrong). */

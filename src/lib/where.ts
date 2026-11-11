@@ -1,3 +1,5 @@
+// Copyright (c) 2026 GrantVRP. All rights reserved. See LICENSE.
+
 // Which town the help, pay and report screens are about, and how to pay there.
 // The town comes from the last check, else GPS, else the place picked by hand.
 // Everything here comes from our own lists, never from a scanned code.

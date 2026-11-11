@@ -1,3 +1,5 @@
+// Copyright (c) 2026 GrantVRP. All rights reserved. See LICENSE.
+
 // Turns the registry's "report_to" entries into call buttons.
 // Phone text in the registry is written for people, e.g.
 //   "705-742-7777 ext. 2802" or "311 (905-615-4311 outside city limits)",

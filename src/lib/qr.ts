@@ -1,3 +1,5 @@
+// Copyright (c) 2026 GrantVRP. All rights reserved. See LICENSE.
+
 // Reading codes from the camera, in the browser only.
 // Uses the browser's own BarcodeDetector where it has one (Chrome on Android),
 // and jsQR everywhere else (iPhone, desktop). jsQR is only downloaded if needed.

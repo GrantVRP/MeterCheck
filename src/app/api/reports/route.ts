@@ -1,3 +1,5 @@
+// Copyright (c) 2026 GrantVRP. All rights reserved. See LICENSE.
+
 // GET /api/reports: fake-code reports for the map (last 30 days), newest first.
 // POST /api/reports: { url, lat?, lon?, accuracy? } from the "Report it" button.
 // Only our server writes reports. A report is saved only if our own rules say the code is fake there.

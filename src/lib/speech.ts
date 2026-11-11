@@ -1,3 +1,5 @@
+// Copyright (c) 2026 GrantVRP. All rights reserved. See LICENSE.
+
 "use client";
 
 // Reads text out loud with the browser's built-in voice.

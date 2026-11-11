@@ -1,3 +1,5 @@
+// Copyright (c) 2026 GrantVRP. All rights reserved. See LICENSE.
+
 import { describe, expect, it } from "vitest";
 import { telFromInput, toCalls, toContacts } from "./contacts";
 import { getCity } from "./registry";

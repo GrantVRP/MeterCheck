@@ -1,3 +1,5 @@
+// Copyright (c) 2026 GrantVRP. All rights reserved. See LICENSE.
+
 // POST /api/owner/logout: signs the owner out on this device.
 
 import { sessionCookie } from "@/lib/server/owner";

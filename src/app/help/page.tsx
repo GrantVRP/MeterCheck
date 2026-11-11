@@ -1,3 +1,5 @@
+// Copyright (c) 2026 GrantVRP. All rights reserved. See LICENSE.
+
 "use client";
 
 import { PhoneIcon } from "@/components/Icons";

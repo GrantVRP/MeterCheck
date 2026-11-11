@@ -1,3 +1,5 @@
+// Copyright (c) 2026 GrantVRP. All rights reserved. See LICENSE.
+
 import "server-only";
 
 // The reports database (Cloudflare D1, binding REPORTS_DB in wrangler.jsonc).

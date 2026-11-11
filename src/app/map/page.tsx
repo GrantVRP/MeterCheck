@@ -1,3 +1,5 @@
+// Copyright (c) 2026 GrantVRP. All rights reserved. See LICENSE.
+
 "use client";
 
 import { useEffect, useMemo, useState } from "react";

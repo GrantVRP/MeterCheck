@@ -1,3 +1,5 @@
+// Copyright (c) 2026 GrantVRP. All rights reserved. See LICENSE.
+
 // Small map maths. Coordinates are [lat, lon] in degrees.
 
 export interface LatLon {

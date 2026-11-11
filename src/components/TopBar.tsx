@@ -1,3 +1,5 @@
+// Copyright (c) 2026 GrantVRP. All rights reserved. See LICENSE.
+
 import Link from "next/link";
 import { BackIcon } from "./Icons";
 

@@ -107,3 +107,7 @@ npm run deploy
 - Meter Check checks where a code goes. It doesn't check the sign itself, and it never says it did.
 - A website can't open another company's app directly unless that company sets it up, so "Pay without scanning" opens the app's store page, which has an Open button.
 - Some towns aren't fully researched yet. A few addresses aren't published (for example Fort Erie's beach codes), so those codes get a careful answer rather than "safe".
+
+## Copyright
+
+Copyright (c) 2026 GrantVRP. All rights reserved. Meter Check is not open source: this code is shown for reference only, and no permission is given to copy, change, reuse or share it. See [LICENSE](LICENSE).

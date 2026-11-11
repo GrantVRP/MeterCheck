@@ -1,3 +1,5 @@
+// Copyright (c) 2026 GrantVRP. All rights reserved. See LICENSE.
+
 // Turns a "Report it" tap into a report for the map. The server runs this, so a
 // report is only saved if our own rules say the code is fake (STOP) at that spot.
 // Whatever the phone claims about the verdict is ignored.

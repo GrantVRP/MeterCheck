@@ -1,3 +1,5 @@
+// Copyright (c) 2026 GrantVRP. All rights reserved. See LICENSE.
+
 // Bold, sign-style icons. All decorative: the words next to them carry the meaning.
 
 import type { SVGProps } from "react";

@@ -1,3 +1,5 @@
+// Copyright (c) 2026 GrantVRP. All rights reserved. See LICENSE.
+
 // Checks what the phone sent before we use any of it.
 
 import { isValidLatLon } from "@/lib/geo";

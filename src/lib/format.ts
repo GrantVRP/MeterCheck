@@ -1,3 +1,5 @@
+// Copyright (c) 2026 GrantVRP. All rights reserved. See LICENSE.
+
 /** "just now", "8 min ago", "2 hours ago", "yesterday", "3 days ago" */
 export function timeAgo(iso: string, now = Date.now()): string {
   const mins = Math.max(0, Math.round((now - new Date(iso).getTime()) / 60000));

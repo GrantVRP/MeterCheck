@@ -1,3 +1,5 @@
+// Copyright (c) 2026 GrantVRP. All rights reserved. See LICENSE.
+
 // Private, local and special network addresses we must never connect to.
 // Plain TypeScript (no Node modules), so it runs on the laptop and on Cloudflare.
 

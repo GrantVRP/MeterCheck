@@ -1,3 +1,5 @@
+-- Copyright (c) 2026 GrantVRP. All rights reserved. See LICENSE.
+
 -- Failed sign-ins to the owner area, to slow down password guessing.
 -- Only a hash of the network address is kept, never the address itself.
 CREATE TABLE IF NOT EXISTS owner_logins (

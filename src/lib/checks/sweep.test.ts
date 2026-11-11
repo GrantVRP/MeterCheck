@@ -1,3 +1,5 @@
+// Copyright (c) 2026 GrantVRP. All rights reserved. See LICENSE.
+
 // Every town we check, one by one: a made-up address or a look-alike is never SAFE,
 // and the town's own parking company is SAFE at the centre of town.
 import { describe, expect, it } from "vitest";

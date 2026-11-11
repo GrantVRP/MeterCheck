@@ -1,3 +1,5 @@
+// Copyright (c) 2026 GrantVRP. All rights reserved. See LICENSE.
+
 import type { Metadata } from "next";
 
 // The owner area is private: keep it out of search engines.

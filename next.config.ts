@@ -1,3 +1,5 @@
+// Copyright (c) 2026 GrantVRP. All rights reserved. See LICENSE.
+
 import type { NextConfig } from "next";
 import os from "node:os";
 

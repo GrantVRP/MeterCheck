@@ -1,3 +1,5 @@
+// Copyright (c) 2026 GrantVRP. All rights reserved. See LICENSE.
+
 import { describe, expect, it } from "vitest";
 import { checkPlace, nearestTown } from "./place";
 import { confirmedExpectedUrl, getCity, registry, townsUsing, townUsesCompany } from "@/lib/registry";

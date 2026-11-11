@@ -1,3 +1,5 @@
+// Copyright (c) 2026 GrantVRP. All rights reserved. See LICENSE.
+
 import type { Verdict } from "./types";
 
 /** The big verdict words. Short and direct, like a road sign. */

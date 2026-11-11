@@ -1,3 +1,5 @@
+// Copyright (c) 2026 GrantVRP. All rights reserved. See LICENSE.
+
 import { describe, expect, it } from "vitest";
 import { registrableDomain, splitHost } from "./address";
 import { editDistance, ownerOf, scoreLookalike } from "./lookalike";

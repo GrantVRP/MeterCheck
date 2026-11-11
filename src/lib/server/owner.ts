@@ -1,3 +1,5 @@
+// Copyright (c) 2026 GrantVRP. All rights reserved. See LICENSE.
+
 import "server-only";
 
 // The owner area (/owner): one password, set as a Cloudflare secret (OWNER_PASSWORD).

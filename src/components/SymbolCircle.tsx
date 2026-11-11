@@ -1,3 +1,5 @@
+// Copyright (c) 2026 GrantVRP. All rights reserved. See LICENSE.
+
 import type { Verdict } from "@/lib/types";
 import { CheckIcon, HandIcon, QuestionIcon } from "./Icons";
 import styles from "./SymbolCircle.module.css";

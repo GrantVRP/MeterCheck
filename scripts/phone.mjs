@@ -1,3 +1,5 @@
+// Copyright (c) 2026 GrantVRP. All rights reserved. See LICENSE.
+
 // npm run phone
 //
 // Starts the dev server and prints an https link (and a QR code of it) to open

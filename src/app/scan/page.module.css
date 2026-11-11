@@ -1,3 +1,5 @@
+/* Copyright (c) 2026 GrantVRP. All rights reserved. See LICENSE. */
+
 /* Full-screen camera. Black, so the camera picture is the focus. */
 .scan {
   --focus: var(--paper);

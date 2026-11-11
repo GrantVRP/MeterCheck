@@ -1,3 +1,5 @@
+// Copyright (c) 2026 GrantVRP. All rights reserved. See LICENSE.
+
 // The verdict rules, in one place. Pure: same facts in, same verdict out.
 //
 // STOP if any check clearly fails. SAFE only if every check passes.
