@@ -1,4 +1,4 @@
-// Copyright (c) 2026 GrantVRP. All rights reserved. See LICENSE.
+// Copyright (c) 2026 Grant Patel. All rights reserved. See LICENSE.
 
 // Shared helpers for reports: loading them, the offline seed, clusters, labels, CSV export.
 

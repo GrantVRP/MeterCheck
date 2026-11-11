@@ -1,4 +1,4 @@
-// Copyright (c) 2026 GrantVRP. All rights reserved. See LICENSE.
+// Copyright (c) 2026 Grant Patel. All rights reserved. See LICENSE.
 
 // One HEAD request on Cloudflare. Cloudflare itself refuses to connect to private
 // networks (the "global_fetch_strictly_public" setting in wrangler.jsonc), and

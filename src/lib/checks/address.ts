@@ -1,4 +1,4 @@
-// Copyright (c) 2026 GrantVRP. All rights reserved. See LICENSE.
+// Copyright (c) 2026 Grant Patel. All rights reserved. See LICENSE.
 
 // Reading web addresses. Pure: used by the server and by the phone when offline.
 

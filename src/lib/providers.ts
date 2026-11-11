@@ -1,4 +1,4 @@
-// Copyright (c) 2026 GrantVRP. All rights reserved. See LICENSE.
+// Copyright (c) 2026 Grant Patel. All rights reserved. See LICENSE.
 
 // The parking companies we know (src/data/providers.json) and the web addresses
 // each one really uses. Pure: used by the server and by the phone when offline.

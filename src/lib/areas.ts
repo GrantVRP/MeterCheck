@@ -1,4 +1,4 @@
-// Copyright (c) 2026 GrantVRP. All rights reserved. See LICENSE.
+// Copyright (c) 2026 Grant Patel. All rights reserved. See LICENSE.
 
 // Names for places Meter Check doesn't check yet, so we can say
 // "You're in Toronto" instead of "a city we don't know". Rough circles around

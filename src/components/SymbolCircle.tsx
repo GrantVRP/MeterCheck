@@ -1,4 +1,4 @@
-// Copyright (c) 2026 GrantVRP. All rights reserved. See LICENSE.
+// Copyright (c) 2026 Grant Patel. All rights reserved. See LICENSE.
 
 import type { Verdict } from "@/lib/types";
 import { CheckIcon, HandIcon, QuestionIcon } from "./Icons";

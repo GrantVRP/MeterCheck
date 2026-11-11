@@ -1,4 +1,4 @@
-// Copyright (c) 2026 GrantVRP. All rights reserved. See LICENSE.
+// Copyright (c) 2026 Grant Patel. All rights reserved. See LICENSE.
 
 // Looking up where a scanned address goes, safely.
 // - HEAD requests only: we never download, render or run the page.

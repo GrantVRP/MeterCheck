@@ -1,4 +1,4 @@
-// Copyright (c) 2026 GrantVRP. All rights reserved. See LICENSE.
+// Copyright (c) 2026 Grant Patel. All rights reserved. See LICENSE.
 
 // Check 1: Place. Where is the person, and does that city use codes at all?
 // Pure: no network, so the phone can run it too when it's offline.

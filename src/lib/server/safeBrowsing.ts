@@ -1,4 +1,4 @@
-// Copyright (c) 2026 GrantVRP. All rights reserved. See LICENSE.
+// Copyright (c) 2026 Grant Patel. All rights reserved. See LICENSE.
 
 // Google Safe Browsing: is this address on Google's list of dangerous websites?
 // Skipped when GOOGLE_SAFE_BROWSING_KEY is empty. Gives up after 3 seconds.

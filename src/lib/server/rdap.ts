@@ -1,4 +1,4 @@
-// Copyright (c) 2026 GrantVRP. All rights reserved. See LICENSE.
+// Copyright (c) 2026 Grant Patel. All rights reserved. See LICENSE.
 
 // How old is a website? Asks RDAP (the public registration records) via rdap.org.
 // Scam sites are usually only days old. Gives up after 3 seconds.

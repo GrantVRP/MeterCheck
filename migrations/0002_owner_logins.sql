@@ -1,4 +1,4 @@
--- Copyright (c) 2026 GrantVRP. All rights reserved. See LICENSE.
+-- Copyright (c) 2026 Grant Patel. All rights reserved. See LICENSE.
 
 -- Failed sign-ins to the owner area, to slow down password guessing.
 -- Only a hash of the network address is kept, never the address itself.

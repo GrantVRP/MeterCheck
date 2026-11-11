@@ -1,4 +1,4 @@
-// Copyright (c) 2026 GrantVRP. All rights reserved. See LICENSE.
+// Copyright (c) 2026 Grant Patel. All rights reserved. See LICENSE.
 
 // Turns the three checks into one result for the verdict screen.
 // Pure, so the server uses it and the phone can use it when it's offline.

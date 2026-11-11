@@ -1,4 +1,4 @@
-// Copyright (c) 2026 GrantVRP. All rights reserved. See LICENSE.
+// Copyright (c) 2026 Grant Patel. All rights reserved. See LICENSE.
 
 // Made-up demo codes, and saved network results for them.
 // With demo mode on, checking these codes makes no network calls, so the demo

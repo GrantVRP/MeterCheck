@@ -1,4 +1,4 @@
-// Copyright (c) 2026 GrantVRP. All rights reserved. See LICENSE.
+// Copyright (c) 2026 Grant Patel. All rights reserved. See LICENSE.
 
 // POST /api/check: the phone sends { url, lat, lon, accuracy, photo? } and gets one verdict back.
 // The scanned address is only ever looked up here, on the server, and never opened.

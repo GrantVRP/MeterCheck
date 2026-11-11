@@ -1,4 +1,4 @@
-// Copyright (c) 2026 GrantVRP. All rights reserved. See LICENSE.
+// Copyright (c) 2026 Grant Patel. All rights reserved. See LICENSE.
 
 // The 13 towns researched in depth on 2026-11-08: what a code there should get.
 import { describe, expect, it } from "vitest";

@@ -110,4 +110,4 @@ npm run deploy
 
 ## Copyright
 
-Copyright (c) 2026 GrantVRP. All rights reserved. Meter Check is not open source: this code is shown for reference only, and no permission is given to copy, change, reuse or share it. See [LICENSE](LICENSE).
+Copyright (c) 2026 Grant Patel. All rights reserved. Meter Check is not open source: this code is shown for reference only, and no permission is given to copy, change, reuse or share it. See [LICENSE](LICENSE).

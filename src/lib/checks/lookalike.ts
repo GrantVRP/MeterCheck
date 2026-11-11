@@ -1,4 +1,4 @@
-// Copyright (c) 2026 GrantVRP. All rights reserved. See LICENSE.
+// Copyright (c) 2026 Grant Patel. All rights reserved. See LICENSE.
 
 // How much does an address look like a real parking company's address?
 // 0 = nothing like it (or it IS the company), 1 = a very close fake.

@@ -1,4 +1,4 @@
-// Copyright (c) 2026 GrantVRP. All rights reserved. See LICENSE.
+// Copyright (c) 2026 Grant Patel. All rights reserved. See LICENSE.
 
 /** "just now", "8 min ago", "2 hours ago", "yesterday", "3 days ago" */
 export function timeAgo(iso: string, now = Date.now()): string {

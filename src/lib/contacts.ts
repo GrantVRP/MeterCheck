@@ -1,4 +1,4 @@
-// Copyright (c) 2026 GrantVRP. All rights reserved. See LICENSE.
+// Copyright (c) 2026 Grant Patel. All rights reserved. See LICENSE.
 
 // Turns the registry's "report_to" entries into call buttons.
 // Phone text in the registry is written for people, e.g.

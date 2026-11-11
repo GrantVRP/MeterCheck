@@ -1,4 +1,4 @@
-// Copyright (c) 2026 GrantVRP. All rights reserved. See LICENSE.
+// Copyright (c) 2026 Grant Patel. All rights reserved. See LICENSE.
 
 // Typed access to the city registry (src/data/registry.json).
 // The registry is the source of truth. Anything marked SAMPLE is a demo placeholder.

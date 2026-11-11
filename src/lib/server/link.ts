@@ -1,4 +1,4 @@
-// Copyright (c) 2026 GrantVRP. All rights reserved. See LICENSE.
+// Copyright (c) 2026 Grant Patel. All rights reserved. See LICENSE.
 
 // Check 2: Link. Server only. Follows redirects, asks how old the website is,
 // and asks Google Safe Browsing. Never opens the page itself.

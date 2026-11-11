@@ -1,4 +1,4 @@
-// Copyright (c) 2026 GrantVRP. All rights reserved. See LICENSE.
+// Copyright (c) 2026 Grant Patel. All rights reserved. See LICENSE.
 
 // Printable codes for our demo props. Open on the laptop and print, or scan right off the screen.
 // Drawn on the server at build time, so no code-drawing script reaches the phone.
